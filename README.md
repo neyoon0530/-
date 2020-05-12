@@ -1,3 +1,4 @@
+
 from random import random, randint
 
 import discord
@@ -127,48 +128,57 @@ async def on_message(message):
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="나를 쏘다니... ", value="윤냥: 감히 내게...", inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "장르"):
         await message.channel.send("현재 있는 장르다냥!")
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="장르", value="``팝송: 4개`` ``발라드: 3개`` ``힙합: 2개``", inline=False)
         await message.channel.send(embed=embed)
+
     if message.content.startswith(prefix + "바보"):
         if len(message.content) == 6:
             await message.channel.send("바보라고 말하는 " + message.author.name + " 집사가 바보다냥!")
+
     if message.content.startswith("샌즈"):
         sanseasteregg = (message.author.name + " 집사, 이스터에그:egg: 를 찾았다냥! 축하한다냥🐾!")
         await message.channel.send(":skull: 샌즈냥! " + message.author.name + " 집사도 아는구냥.")
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="와! 샌즈! ", value=sanseasteregg, inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith("ㅅㅈㅅㄱ"):
         aliveeasteregg = (message.author.name + " 집사, 이스터에그:egg: 를 찾았다냥! 축하한다냥🐾!")
         await message.channel.send(":heart_decoration: ㅅㅈㅅㄱ! " + message.author.name + " 집사, 살아있구냥.")
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="나 살아있어요 ", value=aliveeasteregg, inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith("와! 샌즈!"):
         sanseasteregg = (message.author.name + " 집사, 이스터에그:egg: 를 찾았다냥! 축하한다냥🐾!")
         await message.channel.send(":skull: 샌즈냥! " + message.author.name + " 집사도 아는구냥.")
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="와! 샌즈! ", value=sanseasteregg, inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith("와 샌즈"):
         sanseasteregg = (message.author.name + " 집사, 이스터에그:egg: 를 찾았다냥! 축하한다냥🐾!")
         await message.channel.send(":skull: 샌즈냥! " + message.author.name + " 집사도 아는구냥.")
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="와! 샌즈! ", value=sanseasteregg, inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith("와샌즈"):
         sanseasteregg = (message.author.name + " 집사, 이스터에그:egg: 를 찾았다냥! 축하한다냥🐾!")
         await message.channel.send(":skull: 샌즈냥! " + message.author.name + " 집사도 아는구냥.")
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="와! 샌즈! ", value=sanseasteregg, inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "공격"):
         embed = discord.Embed(color=0x00ff00)
         embed.add_field(name="공격 기술은 이런 게 있다냥! ", value="```할퀴기, 내려찍기, 꾹꾹이```", inline=False)
         await message.channel.send(embed=embed)
+
     if message.content.startswith(prefix + "채널메시지"):
         if message.author.id == 621555325862150164 or message.channel.permissions_for(message.author).administrator:
             channel = message.content[10:28]
@@ -180,6 +190,7 @@ async def on_message(message):
                 await message.channel.send("'" + msg + "'(이)라고 채널메시지를 보냈다냥!")
         else:
             await message.channel.send("채널메시지 기능은 내 개인 비서인 네윤이나 서버의 관리자만 사용할 수 있다냥!")
+
     if message.content.startswith(prefix + "정보"):
         await message.channel.send(message.author.name + " 집사의 정보다냥!")
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
@@ -190,6 +201,7 @@ async def on_message(message):
         embed.add_field(name="아이디::regional_indicator_i: :regional_indicator_d: ", value=message.author.id, inline=False)
         embed.set_thumbnail(url=message.author.avatar_url)
         await message.channel.send(embed=embed)
+
     if message.content.startswith(prefix + "도움"):
         embed = discord.Embed(colour = 0x00ff00)
         await message.channel.send("도움말이다냥! " + message.author.name + " 집사, 잘 기억해두라냥!")
@@ -202,39 +214,47 @@ async def on_message(message):
         embed.add_field(name="음악 :musical_note:    ", value="``윤냥아 선곡 (장르)`` ``윤냥아 장르``", inline=False)
         await message.channel.send(embed=embed)
         await message.channel.send("각각의 세부설명은 ``윤냥아 설명 (원하는 항목)`` 의 형식으로 입력하면 디엠으로 설명해주겠다냥 ")
+
     if message.content.startswith(prefix + "설명 대화"):
         embed = discord.Embed(colour = 0x00ff00)
         embed.add_field(name='대화법 :smile:  ', value="`나와 대화할 수 있는 기능이다냥!`` 앞에 '윤냥아'라고 붙이고 입력하면 된다냥!", inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "설명 채널메시지"):
         embed = discord.Embed(colour = 0x00ff00)
         embed.add_field(name='채널메시지 :signal_strength:  ', value="``원하는 채널에 나를 시켜 메시지를 보낼 수 있다냥! ``윤냥아 채널메시지 (채널 아이디) (할 말) 순으로 입력하면 된다냥!``", inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "설명 디엠"):
         embed = discord.Embed(colour = 0x00ff00)
         embed.add_field(name='디엠 :regional_indicator_d: :regional_indicator_m: ', value="원하는 유저한테 디엠을 보내게 시키는 기능이다냥! ``윤냥아 디엠 (유저 아이디) (할 말) 순으로 입력``하면 되고, 디엠을 보내면 받는 유저에게 " + message.author.name + " 집사가 보낸 디엠이라는 것이 뜬다냥!", inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "설명 놀이"):
         embed = discord.Embed(colour = 0x00ff00)
         embed.add_field(name='놀이 :four_leaf_clover: ', value="오락 기능이다냥! 자세한 설명은 밑을 봐라냥!", inline=False)
         embed.add_field(name='주사위', value="``윤냥아 주사위`` 로 실행시킬 수 있으며, 1~6까지의 수를 뽑아준다냥!", inline=True)
         embed.add_field(name='확률', value="``윤냥아 확률`` 로 실행시킬 수 있으며, 내가 1~100까지의 수를 뽑아주는데, 77이 뽑히면 당첨이다냥!", inline=True)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "설명 정보"):
         embed = discord.Embed(colour=0x00ff00)
         embed.add_field(name='정보 :detective: ', value="``윤냥아 정보``로 실행시킬 수 있으며, 이름과 디스플레이 닉네임, 가입일, 아이디와 프로필을 알려준다냥!", inline=False)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "설명 음악"):
         embed = discord.Embed(colour=0x00ff00)
         embed.add_field(name='음악 :musical_note: ', value="음악 선곡 기능이다냥! 자세한 설명은 밑을 봐라냥!", inline=False)
         embed.add_field(name='선곡', value="``윤냥아 선곡 (장르)`` 로 실행시킬 수 있으며, 선택한 장르의 랜덤한 곡을 하나 선곡해준다냥!", inline=True)
         embed.add_field(name='장르 확인', value="``윤냥아 장르`` 로 실행시킬 수 있으며, 현재 나에게 있는 곡들의 장르의 종류들을 준다냥!", inline=True)
         await message.author.send(embed=embed)
+
     if message.content.startswith(prefix + "설명"):
         length = message.content
         length = len(length)
         if length < 9:
             await message.channel.send("``윤냥아 설명 (원하는 항목)`` 의 형식으로 입력하라냥!")
+
     if message.content.startswith(prefix + "확률"):
         percent_value = randint(1, 100)
         embed = discord.Embed(colour=0x00ff00)
@@ -249,6 +269,8 @@ async def on_message(message):
             await message.author.send(embed=embed)
         else:
             await message.channel.send(message.author.name + " 집사, 아쉽게도 1%의 확률을 뚫지 못 했다냥...")
+
+
     if message.content.startswith(prefix + "굴려"):
         dice_value = randint(1, 6)
         await message.channel.send("주사위를 굴린다냥!")
@@ -268,11 +290,13 @@ async def on_message(message):
         embed.add_field(name='주사위', value=dice_value, inline=False)
         embed.set_thumbnail(url="https://discord.com/channels/707587767130914818/707762913556955216/707762960394878986")
         await message.channel.send(embed=embed)
+
     if message.content.startswith(prefix + "디엠"):
         author = message.guild.get_member(int(message.content[7:25]))
         msg = message.content[26:]
         await message.channel.send("``" + msg + "``(이)라고 디엠을 보냈다냥!")
         await author.send(message.author.name + " 집사가 보낸 디엠이다냥: " + msg)
+
     if message.content.startswith(prefix + "선곡"):
         length = message.content
         length = len(length)
@@ -344,6 +368,7 @@ async def on_message(message):
             else:
                 nogenre = message.content[7:]
                 await message.channel.send("``" + nogenre + "`` (이)라는 장르는 없다냥!")
+
 
 
 client.run("NzA4MTY3MjM1NDE5NTA0NjYw.XrTjvQ.OhR2DeekH4I0j5ncdjtePq-1bHs")
